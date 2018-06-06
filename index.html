@@ -63,11 +63,11 @@
     <div class="right">
         <div class="title">相关链接</div>
         <div class="address">
-            <div class="p1 p">俄罗斯联邦总统国家行政学院</div>
-            <div class="p2 p">韩国圆光大学</div>
-            <div class="p3 p">韩国大田大学</div>
-            <div class="p4 p">加拿大卡普顿大学</div>
-            <div class="p5 p">泰国正大管理学院</div>
+            <div class="p1 p" ng-click="toRussia1()">俄罗斯联邦总统国家行政学院</div>
+            <div class="p2 p" ng-click="toYuan1()">韩国圆光大学</div>
+            <div class="p3 p" ng-click="toDa1()">韩国大田大学</div>
+            <div class="p4 p" ng-click="toKa1()">加拿大卡普顿大学</div>
+            <div class="p5 p" ng-click="toZheng1()">泰国正大管理学院</div>
         </div>
     </div>
 </div>
@@ -148,6 +148,38 @@
         $scope.toYuan=function(){
             $scope.$emit('to-parent', {id:"2"});
             $location.path('/yuanguang');
+        }
+        $scope.toRussia=function(){
+            $scope.$emit('to-parent', {id:"2"});
+            $location.path('/russia');
+        }
+        $scope.toCupe=function(){
+            $scope.$emit('to-parent', {id:"2"});
+            $location.path('/cape');
+        }
+        $scope.toZheng=function(){
+            $scope.$emit('to-parent', {id:"2"});
+            $location.path('/pim');
+        }
+        $scope.toHebut=function(){
+            $scope.$emit('to-parent', {id:"3"});
+            $location.path('/hebut');
+        }
+        $scope.toBeiWai=function(){
+            $scope.$emit('to-parent', {id:"3"});
+            $location.path('/zsb');
+        }
+        $scope.toChuan=function(){
+            $scope.$emit('to-parent', {id:"3"});
+            $location.path('/zsb');
+        }
+        $scope.toBeiLi=function(){
+            $scope.$emit('to-parent', {id:"3"});
+            $location.path('/zsb');
+        }
+        $scope.toTong1=function(){
+            $scope.$emit('to-parent', {id:"3"});
+            $location.path('/direction');
         }
         $scope.ask=false;
         $scope.ask1=function () {
@@ -234,6 +266,46 @@
         // $scope.ab=locals.get("valll");
         // $scope.inter=locals.get("val3");
         // $scope.cont=locals.get("val4");
+        $scope.toRussia1=function(){
+            $location.path('/russia');
+            var inde=2;
+            locals.set("did",inde);
+            locals.set("va1",inde);
+            angular.element($('.confix').find('.active')).removeClass('active');
+            angular.element($('.confix').find('#2')).addClass('active');
+        }
+        $scope.toYuan1=function(){
+            $location.path('/yuanguang');
+            var inde=2;
+            locals.set("did",inde);
+            locals.set("va1",inde);
+            angular.element($('.confix').find('.active')).removeClass('active');
+            angular.element($('.confix').find('#2')).addClass('active');
+        }
+        $scope.toDa1=function(){
+            $location.path('/datian');
+            var inde=2;
+            locals.set("did",inde);
+            locals.set("va1",inde);
+            angular.element($('.confix').find('.active')).removeClass('active');
+            angular.element($('.confix').find('#2')).addClass('active');
+        }
+        $scope.toKa1=function(){
+            $location.path('/cape');
+            var inde=2;
+            locals.set("did",inde);
+            locals.set("va1",inde);
+            angular.element($('.confix').find('.active')).removeClass('active');
+            angular.element($('.confix').find('#2')).addClass('active');
+        }
+        $scope.toZheng1=function(){
+            $location.path('/pim');
+            var inde=2;
+            locals.set("did",inde);
+            locals.set("va1",inde);
+            angular.element($('.confix').find('.active')).removeClass('active');
+            angular.element($('.confix').find('#2')).addClass('active');
+        }
         var act=angular.element($('.confix').find('.active'));
         if(act.length==0){
         angular.element($('.confix').find('li')[0]).addClass('active')
@@ -274,11 +346,12 @@
             if(data.id){
                 console.log(data.id);
                 var a11=data.id;
+                var stt='#'+a11;
                 locals.set("va1",a11);
-                var liObj=angular.element($('.confix').find('#2'));
+                var liObj=angular.element($('.confix').find(stt));
                 console.log(liObj);
                 angular.element($('.confix').find('.active')).removeClass('active');
-                angular.element($('.confix').find('#2')).addClass('active');
+                angular.element($('.confix').find(stt)).addClass('active');
             }
         });
         $scope.ddii=locals.get("va1");
