@@ -1,0 +1,17 @@
+.sch{
+    width: 100%;
+    /*height: 800px;*/
+    /*border: 1px solid red;*/
+}
+.sch li{
+    width: 100%;
+    height: 315px;
+    margin-bottom: 30px;
+    padding-right: 30px;
+}
+.sch li .left{
+    width: 425px;
+    height: 315px;
+    float: left;
+    /*margin-right: 30px;*/
+}

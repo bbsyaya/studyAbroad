@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css?v=2">
+    <script src="js/main.js"></script>
+    <script src="js/scroll.js"></script>
+    <title>中国留学教育网</title>
+</head>
+<body>
+    <div class="con">
+        <div class="des">
+            <div class="p1">品质服务·值得信赖</div>
+            <div class="p2">专业的留学深造机构  全面可靠的贴心服务</div>
+            <div class="ask" ng-click="ask1()" ng-mouseleave="leave()">点击咨询
+                <div class="askZone" ng-show="ask">
+                    <div class="ang"></div>
+                    <div class="askWe">微信咨询</div>
+                    <div class="askAli">QQ咨询</div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="imga" src="img/banner1.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="imga" src="img/banner2.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="imga" src="img/banner3.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="imga" src="img/banner4.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="imga" src="img/banner5.jpg" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="title">
+            <div class="line1"></div>
+            <div class="center">主推院校</div>
+            <div class="line2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="cov()" ng-mouseleave="cov1()">
+                    <div class="cover" ng-show="cove">
+                        <div class="covBtn" ng-click="toDa()"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch1.jpg" alt="">
+                </div>
+                <div class="sch">韩国大田大学</div>
+                <div class="tex">
+                    大田大学是韩国的一所4年制私立大学，开校于1981年，1989年升格为综合大学并增设研究院，1997年被教育部指定为合格自治大学，连续多年在大学综合评价中被评为优秀大学。
+                </div>
+            </div>
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="c1()" ng-mouseleave="c11()">
+                    <div class="cover" ng-show="c111">
+                        <div class="covBtn" ng-click="toYuan()"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch2.jpg" alt="">
+                </div>
+                <div class="sch">韩国圆光大学</div>
+                <div class="tex">
+                    圆光大学（Wonkwang University）前身为1946年建立的”唯一学林”，在韩国近现代教育史上声名远赫，现已发展成为一所蜚声海内外的名牌私立大学。
+                </div>
+            </div>
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="c2()" ng-mouseleave="c22()">
+                    <div class="cover" ng-show="c222">
+                        <div class="covBtn"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch3.jpg" alt="">
+                </div>
+                <div class="sch">俄罗斯联邦总统国家行政学院</div>
+                <div class="tex">
+                    俄罗斯联邦总统直属国民经济与国家行政学院是俄罗斯和欧洲最大的人文社科性质的大学，是俄罗斯五所顶尖重点院校之一，在俄罗斯和独联体总共有68个分校，有大于20万的在读学生。
+                </div>
+            </div>
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="c3()" ng-mouseleave="c33()">
+                    <div class="cover" ng-show="c333">
+                        <div class="covBtn"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch4.jpg" alt="">
+                </div>
+                <div class="sch">加拿大卡普顿大学</div>
+                <div class="tex">
+                    卡普顿大学原名不列颠海角大学，是加拿大的一所公立综合性大学。建于1953年，在2015年加拿大权威大学排名《麦克林杂志》评选的加拿大基础类大学排名中位列第十八名 。
+                </div>
+            </div>
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="c4()" ng-mouseleave="c44()">
+                    <div class="cover" ng-show="c444">
+                        <div class="covBtn"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch5.jpg" alt="">
+                </div>
+                <div class="sch">泰国正大管理学院</div>
+                <div class="tex">
+                    正大管理学院位于泰国曼谷暖武里府白蒛区占瓦塔纳路85/1号邮编 11120。校园占地18,004 平方米，坐落在政府中央办公区，交通便利。
+                </div>
+            </div>
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="c5()" ng-mouseleave="c55()">
+                    <div class="cover" ng-show="c555">
+                        <div class="covBtn"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch6.jpg" alt="">
+                </div>
+                <div class="sch">河北工业大学</div>
+                <div class="tex">
+                    河北工业大学是隶属于河北省的一所国家“211工程”高校，地处天津，是教育部与河北省人民政府、天津市人民政府共建“双一流”世界一流学科建设高校。
+                </div>
+            </div>
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="c6()" ng-mouseleave="c66()">
+                    <div class="cover" ng-show="c666">
+                        <div class="covBtn"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch7.jpg" alt="">
+                </div>
+                <div class="sch">北京外国语大学</div>
+                <div class="tex">
+                    北京外国语大学，由中华人民共和国教育部直属，位列国家首批“211工程”，入选“985工程优势学科创新平台”，国家首批“双一流”世界一流学科建设高校。
+                </div>
+            </div>
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="c7()" ng-mouseleave="c77()">
+                    <div class="cover" ng-show="c777">
+                        <div class="covBtn"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch8.jpg" alt="">
+                </div>
+                <div class="sch">中国传媒大学</div>
+                <div class="tex">
+                    中国传媒大学，是教育部直属的国家“211工程”、“985工程”优势学科创新平台、“珠峰计划”、“2011计划”、“111计划”建设的全国重点大学。
+                </div>
+            </div>
+            <div class="every col-lg-4 col-md-6">
+                <div class="ig" ng-mouseover="c8()" ng-mouseleave="c88()">
+                    <div class="cover" ng-show="c888">
+                        <div class="covBtn"> 查看院校信息</div>
+                    </div>
+                    <img src="img/sch9.jpg" alt="">
+                </div>
+                <div class="sch">北京理工大学</div>
+                <div class="tex">
+                    北京理工大学，由中华人民共和国工业和信息化部直属，中央直管副部级建制，是世界一流大学建设高校、“211工程”、“985工程”首批重点建设高校。
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

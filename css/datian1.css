@@ -1,0 +1,55 @@
+
+
+.focus{height:646px}
+.focusbox{ position:relative;height: 646px;}
+.focusimg{ width:100%; height:528px; position:relative; overflow:hidden;-webkit-perspective: 1300px;}
+.fimglist{width:400%; height:528px;position:relative;-moz-perspective: 1300px;}
+.fimglist img{display:block; width:100%; height:528px; cursor:pointer;}
+.fimglist li{width:780px; height:528px; float:left;-webkit-transform-origin:50% 100%;transform-origin:50% 100%;}
+.fimglist li.onpre{-webkit-animation:onpre .5s ease-in-out;animation:onpre .5s ease-in-out;opacity:0;-webkit-transform:scale(0.8,0.8);transform:scale(0.8,0.8);}
+@-webkit-keyframes onpre{
+	0%{opacity:1;-webkit-transform:rotateY(0deg);}
+	100%{opacity:0;-webkit-transform:rotateY(90deg)}
+}
+@keyframes onpre{
+	0%{opacity:1;transform:rotateY(0deg);}
+	100%{opacity:0;transform:rotateY(90deg)}
+}
+/*.focustool{width:100%; overflow:hidden; padding:5px 0 10px; margin:0 auto; position:relative;}
+.ftoollist{width:100%; position:relative;}
+.ftoollist img{display:block; width:25%; height:146px; margin-bottom:3px;}
+.ftoollist a{background-color:#1C1C1C; display:block; width:129px; padding:4px 0 4px 4px; position:relative;-webkit-transition:all .3s linear;transition:all .3s linear;}
+.ftoollist li{float:left; cursor:pointer; -webkit-transition:all .3s linear; transition:all .3s linear;}
+.ftoollist .imgname{line-height:25px; text-align:center; color:#FFF; font-family:\5FAE\8F6F\96C5\9ED1; font-weight:400; font-size:18px; height:25px; overflow:hidden; cursor:pointer;}
+.ftoollist .imgshortcat{line-height:20px; text-align:center; color:#7D7D7D; font-size:12px; height:20px; overflow:hidden; cursor:pointer;}
+.ftoollist a:hover{background-color:#503769; padding:4px; margin-right:-4px; z-index:100; top:-5px;}
+.ftoollist a:hover .imgname{color:#DBC98C;}
+.ftoollist a:hover .imgshortcat{color:#FFF;}
+.ftoollist .on a{background-color:#503769; padding:4px; margin-right:-4px; z-index:100; top:-5px;}
+.ftoollist .on .imgname{color:#DBC98C;}
+.ftoollist .on .imgshortcat{color:#FFF;}*/
+.focustool{
+	width: 100%;
+	height:124px;
+	/*background: red;*/
+	background: white;
+}
+.focustool .ftoollist{
+	width: 100%;
+	box-sizing: border-box;
+	padding-top:9px;
+	padding-bottom:9px;
+	cursor: pointer;
+}
+.focustool .ftoollist li{
+	height:124px;
+	width: 24%;
+	float: left;
+}
+.focustool .ftoollist li img{
+	width: 100%;
+	height: 104px;
+}
+.focustool .ftoollist li+li{
+	margin-left: 10px;
+}

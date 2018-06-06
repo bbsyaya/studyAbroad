@@ -1,0 +1,256 @@
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.imga{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 65px;
+    padding-right: 205px;
+    padding-left: 205px;
+}
+.content .title{
+    width: 454px;
+    height: 29px;
+    margin: 0 auto;
+    margin-bottom: 66px;
+}
+.content .title .line1{
+    width: 148px;
+    height: 2px;
+    background-color: #afafaf;
+    float: left;
+    margin-right: 19px;
+    margin-top: 13px;
+}
+.content .title .center{
+    width: 120px;
+    height: 29px;
+    line-height: 29px;
+    font-family: PingFangSC-Semibold;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    float: left;
+    color: #333333;
+    margin-right: 19px;
+}
+.content .title .line2{
+    width: 148px;
+    height: 2px;
+    background-color: #afafaf;
+    float: left;
+    margin-top: 13px;
+}
+.every{
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    /*position: relative;*/
+    /*height: 455px;*/
+    /*border: 1px solid red;*/
+    margin-bottom: 14px;
+}
+.every .ig{
+    position: relative;
+}
+.every .ig .cover{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 240px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.every .ig .cover .covBtn{
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+    top: 50%;
+    margin-top: -18px;
+    width: 140px;
+    height: 36px;
+    background-color: #72bf49;
+    border-radius: 4px;
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 36px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+.every .ig{
+    margin-bottom: 24px;
+}
+.every .ig img{
+    width: 100%;
+}
+.every .sch{
+    height: 18px;
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 21px;
+}
+.every .tex {
+    width: 100%;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #666666;
+}
+.con{
+    position: relative;
+    box-sizing: border-box;
+    /*padding-top: 35px;*/
+}
+.con .des{
+    width: 962px;
+    height: 140px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -481px;
+    /*background: red;*/
+    z-index: 1000;
+}
+.con .des .p1{
+    height: 48px;
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 48px;
+    letter-spacing: 0px;
+    color: #989820;
+    text-align: center;
+    margin-bottom: 14px;
+}
+.con .des .p2{
+    height: 17px;
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 17px;
+    letter-spacing: 0px;
+    color: #989820;
+    text-align: center;
+
+}
+.con .des .ask{
+    width: 100px;
+    height: 50px;
+    background-color: #72bf49;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    font-family: PingFangSC-Semibold;
+    font-size: 23px;
+    font-weight: normal;
+    font-stretch: normal;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+.con .des .ask .askZone{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: -107px;
+    bottom: 0px;
+    background: #fff;
+    border-radius: 4px;
+}
+.con .des .ask .askZone .ang{
+     width: 0px;
+     height: 0px;
+     border-width: 8px;
+     border-style: solid;
+     border-color: transparent white transparent transparent;
+     position: absolute;
+     left: -16px;
+     top: 50%;
+     margin-top: -8px;
+ }
+.con .des .ask .askZone .askWe{
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    left: 0px;
+    top:0px;
+    line-height: 25px;
+    text-align: center;
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #666666;
+}
+.con .des .ask .askZone .askAli{
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    left: 0px;
+    top:25px;
+    line-height: 25px;
+    text-align: center;
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #666666;
+}
+td,th{
+    text-align: center;
+    vertical-align: middle;
+    padding:5px 15px;
+}
+
+

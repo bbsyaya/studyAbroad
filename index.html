@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/bitbug_favicon.ico">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script src="angular/angular-route.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <title>中国留学教育网</title>
+</head>
+<body ng-app="myApp" ng-controller="homeController">
+<div id="toTop"><img src="img/arr.jpg" width="50" height="50" alt=""></div>
+<div class="top">
+    <div class="company">北京学信国际文化发展有限公司</div>
+    <div class="tel">电话咨询：18910164968 / 13717807968</div>
+</div>
+<div class="top2">
+    <div class="left">中国留学教育网</div>
+    <div class="right">
+        <ul class="confix">
+            <li id="1" ng-click="toHome()">首页</li>
+            <li id="2" ng-click="toAbroad()">国外留学</li>
+            <li id="3"ng-click="toInternal()">国内深造</li>
+            <li id="4" id="contact" style="cursor: pointer" ng-click="toCont()">
+                联系我们
+            </li>
+        </ul>
+    </div>
+</div>
+<div>
+    <div ng-view></div>
+</div>
+<div class="footer clearfix">
+    <div class="left">
+        <div class="title">联系方式</div>
+        <div class="address">
+            <div class="p1 p">北京学信国际文化发展有限公司</div>
+            <div class="p2 p">北京市海淀区eco中科爱克5楼</div>
+        </div>
+        <div class="contact">
+            <div class="p1 p">电话：18910164968 / 13717807968</div>
+            <div class="p2 p">微信：13717807968 / 1369757539</div>
+            <div class="p3 p">QQ ：417759806 / 459222081</div>
+        </div>
+        <div class="right">
+            © 2018 北京学信国际文化发展有限公司
+        </div>
+    </div>
+    <div class="right">
+        <div class="title">相关链接</div>
+        <div class="address">
+            <div class="p1 p">俄罗斯联邦总统国家行政学院</div>
+            <div class="p2 p">韩国圆光大学</div>
+            <div class="p3 p">韩国大田大学</div>
+            <div class="p4 p">加拿大卡普顿大学</div>
+            <div class="p5 p">泰国正大管理学院</div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var app=angular.module("myApp",['ngRoute']);
+    app.config(function ($routeProvider) {
+        $routeProvider.when('/main',{
+            templateUrl:'./main.html',
+            controller:'main'
+        })
+            .when('/abroad',
+                {
+                    templateUrl:'./abroad.html',
+                    controller:'main'
+                })
+            .when('/datian',
+                {
+                    templateUrl:'./datian.html',
+                })
+            .when('/yuanguang',
+                {
+                    templateUrl:'./yuanguang.html'
+                })
+            .when('/russia',
+                {
+                    templateUrl:'./russia.html'
+                })
+            .when('/cape',
+                {
+                    templateUrl:'./cape.html'
+                })
+            .when('/pim',
+                {
+                    templateUrl:'./pim.html'
+                })
+            .when('/internal',
+                {
+                    templateUrl:'./internal.html',
+                    controller:'main'
+                })
+            .when('/hebut',
+                {
+                    templateUrl:'./hebut.html',
+                })
+            .when('/direction',
+                {
+                    templateUrl:'./direction.html',
+                })
+            .when('/zsb',
+                {
+                    templateUrl:'./zsb.html',
+                })
+            .otherwise('/main')
+
+    })
+    //解决ie11缓存
+    app.config(['$httpProvider', function($httpProvider) {
+        //initialize get if not there
+        if (!$httpProvider.defaults.headers.get) {
+            $httpProvider.defaults.headers.get = {};
+        }
+        // Answer edited to include suggestions from comments
+        // because previous version of code introduced browser-related errors
+        //disable IE ajax request caching
+        $httpProvider.defaults.headers.get['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
+        // extra
+        $httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
+//        $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
+    }]);
+    app.service("appService", [function(){
+    }]);
+    app.controller('main',function ($scope,$location,appService,$cacheFactory) {
+        $scope.toDa=function(){
+            $scope.$emit('to-parent', {id:"2"});
+            $location.path('/datian');
+        }
+        $scope.toYuan=function(){
+            $scope.$emit('to-parent', {id:"2"});
+            $location.path('/yuanguang');
+        }
+        $scope.ask=false;
+        $scope.ask1=function () {
+            $scope.ask=true;
+        }
+        $scope.leave=function () {
+            $scope.ask=false;
+        }
+        $scope.cove=false;
+        $scope.c111=false;
+        $scope.c222=false;
+        $scope.c333=false;
+        $scope.c444=false;
+        $scope.c555=false;
+        $scope.c666=false;
+        $scope.c777=false;
+        $scope.c888=false;
+        $scope.c999=false;
+        $scope.c100=false;
+        $scope.cov=function () {
+            $scope.cove=true;
+        }
+        $scope.cov1=function () {
+            $scope.cove=false;
+        }
+        $scope.c1=function () {
+            $scope.c111=true;
+        }
+        $scope.c11=function () {
+            $scope.c111=false;
+        }
+        $scope.c2=function () {
+            $scope.c222=true;
+        }
+        $scope.c22=function () {
+            $scope.c222=false;
+        }
+        $scope.c3=function () {
+            $scope.c333=true;
+        }
+        $scope.c33=function () {
+            $scope.c333=false;
+        }
+        $scope.c4=function () {
+            $scope.c444=true;
+        }
+        $scope.c44=function () {
+            $scope.c444=false;
+        }
+        $scope.c5=function () {
+            $scope.c555=true;
+        }
+        $scope.c55=function () {
+            $scope.c555=false;
+        }
+        $scope.c6=function () {
+            $scope.c666=true;
+        }
+        $scope.c66=function () {
+            $scope.c666=false;
+        }
+        $scope.c7=function () {
+            $scope.c777=true;
+        }
+        $scope.c77=function () {
+            $scope.c777=false;
+        }
+        $scope.c8=function () {
+            $scope.c888=true;
+        }
+        $scope.c88=function () {
+            $scope.c888=false;
+        }
+        $scope.c9=function () {
+            $scope.c100=true;
+        }
+        $scope.c99=function () {
+            $scope.c100=false;
+        }
+    })
+    app.controller('homeController',function ($scope,$location,appService,locals,$cacheFactory) {
+        // $scope.homee=true;
+        // $scope.homee=locals.get("val1");
+        // $scope.ab=locals.get("valll");
+        // $scope.inter=locals.get("val3");
+        // $scope.cont=locals.get("val4");
+        var act=angular.element($('.confix').find('.active'));
+        if(act.length==0){
+        angular.element($('.confix').find('li')[0]).addClass('active')
+        }
+        var liObj=angular.element($('.confix').find('li'));
+        console.log(liObj);
+        liObj.on('click',function () {
+            console.log($(this)[0].id);
+            var ii=$(this)[0].id;
+            console.log(ii);
+            locals.set("did",ii);
+            locals.set("va1",ii);
+            angular.element($('.confix').find('.active')).removeClass('active');
+            $(this).addClass('active');
+        })
+        $scope.idd=locals.get("did");
+        console.log($scope.idd);
+        if($scope.idd){
+            console.log($scope.idd);
+            var str='#'+$scope.idd;
+            angular.element($('.confix').find('.active')).removeClass('active');
+            angular.element($('.confix').find(str)).addClass('active');
+        }
+        // console.log(obj);
+        /**/
+        $scope.$on('to-parent', function(event,data) {
+            // console.log(data.val);     //父级能得到值
+            //  $scope.homee=!(data.val);
+            // locals.set("val1",$scope.homee);
+            // $scope.ab=data.val;
+            // locals.set("valll",data.val);
+            // $scope.ab1=locals.get("valll");;
+            //  $scope.inter=!(data.val);
+            // locals.set("val3",$scope.inter);
+            // $scope.cont=!(data.val);
+            // locals.set("val4",$scope.cont);
+            // console.log($scope.homee,$scope.ab,$scope.inter,$scope.cont);
+            if(data.id){
+                console.log(data.id);
+                var a11=data.id;
+                locals.set("va1",a11);
+                var liObj=angular.element($('.confix').find('#2'));
+                console.log(liObj);
+                angular.element($('.confix').find('.active')).removeClass('active');
+                angular.element($('.confix').find('#2')).addClass('active');
+            }
+        });
+        $scope.ddii=locals.get("va1");
+        console.log($scope.ddii);
+        if($scope.ddii){
+            console.log($scope.ddii);
+            var vall11=$scope.ddii;
+            var iddid='#'+vall11;
+            var liObj=angular.element($('.confix').find(iddid));
+            console.log(liObj);
+            angular.element($('.confix').find('.active')).removeClass('active');
+            console.log(iddid);
+            angular.element($('.confix').find(iddid)).addClass('active');
+        }
+        /**/
+        $scope.toHome=function () {
+            $location.path('/main');
+        }
+        $scope.toAbroad=function () {
+            $location.path('/abroad');
+        }
+        $scope.toInternal=function () {
+            $location.path('/internal');
+        }
+        $scope.toCont=function () {
+            var speed = 800;//滚动速度
+
+            var h=document.body.clientHeight;
+
+            // console.log(h);
+            var windowHeight = parseInt(angular.element($("body")).css("height"));//整个页面的高度
+            // console.log(windowHeight);
+                angular.element($('html')).animate({
+
+                        scrollTop: h+'px'
+
+                    }, speed);
+
+        }
+
+    })
+    /*本地存储服务开始*/
+    app.factory('locals', ['$window', function ($window) {
+        return {        //存储单个属性
+            set: function (key, value) {
+                $window.sessionStorage[key] = value;
+            },        //读取单个属性
+            get: function (key, defaultValue) {
+                return $window.sessionStorage[key] || defaultValue;
+            },        //存储对象，以JSON格式存储
+            setObject: function (key, value) {
+                $window.sessionStorage[key] = JSON.stringify(value);//将对象以字符串保存
+            },        //读取对象
+            getObject: function (key) {
+                return JSON.parse($window.sessionStorage[key] || '{}');//获取字符串并解析成对象
+            }
+
+        }
+    }]);
+    /*本地存储服务结束*/
+</script>
+</html>

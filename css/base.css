@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.confix::after{
+    content:"";/*设置内容为空*/
+    height:0;/*高度为0*/
+    line-height:0;/*行高为0*/
+    display:block;/*将文本转为块级元素*/
+    visibility:hidden;/*将元素隐藏*/
+    clear:both;/*清除浮动*/
+}
+.confix{
+    zoom: 1;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none!important;
+}
+td,th{
+    text-align: center;
+    vertical-align: middle;
+}
