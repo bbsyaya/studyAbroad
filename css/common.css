@@ -98,6 +98,7 @@
 }
 .top2 .right ul li.active{
     background-color: #72bf49;
+    color:#fff
 }
 .top2 .right ul li.active a{
     color: #fff!important;
