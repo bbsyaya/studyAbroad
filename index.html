@@ -260,7 +260,31 @@
             $scope.c100=false;
         }
     })
-    app.controller('homeController',function ($scope,$location,appService,locals,$cacheFactory) {
+    app.controller('homeController',function ($scope,$location,appService,locals,$cacheFactory,$rootScope) {
+        $rootScope.$on('$locationChangeStart',function(){
+            console.log('开始改变$location')
+        });
+        $rootScope.$on('$locationChangeSuccess',function(){
+            console.log($location.path());
+            var paht=$location.path();
+            angular.element($('.confix').find('.active')).removeClass('active');
+            if(paht=="/main"){
+                locals.set("did",'1');
+                locals.set("va1",'1');
+                angular.element($('.confix').find('.active')).removeClass('active');
+                angular.element($('.confix').find('#1')).addClass('active');
+            }else if((paht=="/abroad")||(paht=='/datian')||(paht=='/yuanguang')||(paht=='/russia')||(paht=='/cape')||(paht=='/pim')){
+                locals.set("did",'2');
+                locals.set("va1",'2');
+                angular.element($('.confix').find('.active')).removeClass('active');
+                angular.element($('.confix').find('#2')).addClass('active');
+            }else if((paht=='/internal')||(paht=='/hebut')||(paht=='/direction')||(paht=='/zsb')){
+                locals.set("did",'3');
+                locals.set("va1",'3');
+                angular.element($('.confix').find('.active')).removeClass('active');
+                angular.element($('.confix').find('#3')).addClass('active');
+            }
+        });
         // $scope.homee=true;
         // $scope.homee=locals.get("val1");
         // $scope.ab=locals.get("valll");
@@ -369,14 +393,110 @@
         /**/
         $scope.toHome=function () {
             $location.path('/main');
+            $rootScope.$on('$locationChangeStart',function(){
+                console.log('开始改变$location')
+            });
+            $rootScope.$on('$locationChangeSuccess',function(){
+                console.log($location.path());
+                var paht=$location.path();
+                angular.element($('.confix').find('.active')).removeClass('active');
+                if(paht=="/main"){
+                    locals.set("did",'1');
+                    locals.set("va1",'1');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#1')).addClass('active');
+                }else if((paht=="/abroad")||(paht=='/datian')||(paht=='/yuanguang')||(paht=='/russia')||(paht=='/cape')||(paht=='/pim')){
+                    locals.set("did",'2');
+                    locals.set("va1",'2');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#2')).addClass('active');
+                }else if((paht=='/internal')||(paht=='/hebut')||(paht=='/direction')||(paht=='/zsb')){
+                    locals.set("did",'3');
+                    locals.set("va1",'3');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#3')).addClass('active');
+                }
+            });
         }
         $scope.toAbroad=function () {
             $location.path('/abroad');
+            $rootScope.$on('$locationChangeStart',function(){
+                console.log('开始改变$location')
+            });
+            $rootScope.$on('$locationChangeSuccess',function(){
+                console.log($location.path());
+                var paht=$location.path();
+                angular.element($('.confix').find('.active')).removeClass('active');
+                if(paht=="/main"){
+                    locals.set("did",'1');
+                    locals.set("va1",'1');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#1')).addClass('active');
+                }else if((paht=="/abroad")||(paht=='/datian')||(paht=='/yuanguang')||(paht=='/russia')||(paht=='/cape')||(paht=='/pim')){
+                    locals.set("did",'2');
+                    locals.set("va1",'2');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#2')).addClass('active');
+                }else if((paht=='/internal')||(paht=='/hebut')||(paht=='/direction')||(paht=='/zsb')){
+                    locals.set("did",'3');
+                    locals.set("va1",'3');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#3')).addClass('active');
+                }
+            });
         }
         $scope.toInternal=function () {
             $location.path('/internal');
+            $rootScope.$on('$locationChangeStart',function(){
+                console.log('开始改变$location')
+            });
+            $rootScope.$on('$locationChangeSuccess',function(){
+                console.log($location.path());
+                var paht=$location.path();
+                angular.element($('.confix').find('.active')).removeClass('active');
+                if(paht=="/main"){
+                    locals.set("did",'1');
+                    locals.set("va1",'1');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#1')).addClass('active');
+                }else if((paht=="/abroad")||(paht=='/datian')||(paht=='/yuanguang')||(paht=='/russia')||(paht=='/cape')||(paht=='/pim')){
+                    locals.set("did",'2');
+                    locals.set("va1",'2');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#2')).addClass('active');
+                }else if((paht=='/internal')||(paht=='/hebut')||(paht=='/direction')||(paht=='/zsb')){
+                    locals.set("did",'3');
+                    locals.set("va1",'3');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#3')).addClass('active');
+                }
+            });
         }
         $scope.toCont=function () {
+            $rootScope.$on('$locationChangeStart',function(){
+                console.log('开始改变$location')
+            });
+            $rootScope.$on('$locationChangeSuccess',function(){
+                console.log($location.path());
+                var paht=$location.path();
+                angular.element($('.confix').find('.active')).removeClass('active');
+                if(paht=="/main"){
+                    locals.set("did",'1');
+                    locals.set("va1",'1');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#1')).addClass('active');
+                }else if((paht=="/abroad")||(paht=='/datian')||(paht=='/yuanguang')||(paht=='/russia')||(paht=='/cape')||(paht=='/pim')){
+                    locals.set("did",'2');
+                    locals.set("va1",'2');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#2')).addClass('active');
+                }else if((paht=='/internal')||(paht=='/hebut')||(paht=='/direction')||(paht=='/zsb')){
+                    locals.set("did",'3');
+                    locals.set("va1",'3');
+                    angular.element($('.confix').find('.active')).removeClass('active');
+                    angular.element($('.confix').find('#3')).addClass('active');
+                }
+            });
             var speed = 800;//滚动速度
 
             var h=document.body.clientHeight;
