@@ -501,6 +501,7 @@
 
             var h=document.body.clientHeight;
 
+
             // console.log(h);
             var windowHeight = parseInt(angular.element($("body")).css("height"));//整个页面的高度
             // console.log(windowHeight);
@@ -509,6 +510,12 @@
                         scrollTop: h+'px'
 
                     }, speed);
+            angular.element($('body')).animate({
+
+                //写成'body'可以兼容safari
+                scrollTop: h+'px'
+
+            }, speed);
 
         }
 
